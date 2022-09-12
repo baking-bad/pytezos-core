@@ -16,16 +16,19 @@ maintainers = [
 readme = "README.md"
 repository = "https://github.com/baking-bad/pytezos-core"
 homepage = "https://pytezos.org"
-keywords = ['tezos', 'blockchain', 'sdk', 'michelson', 'repl', 'cryptocurrencies', 'smart-contracts', 'jupyter']
+keywords = ['tezos', 'blockchain', 'sdk', 'michelson', 'repl', 'cryptocurrencies', 'smart-contracts']
 classifiers = [
-    "Programming Language :: Python :: 3",
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
-    "Intended Audience :: Developers",
-    "Topic :: System :: Shells",
-    "Framework :: IPython",
-    "License :: OSI Approved :: MIT License",
-
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Software Development :: Libraries",
+    "Typing :: Typed",
 ]
 packages = [
     { include = "pytezos_core", from = "src" },
