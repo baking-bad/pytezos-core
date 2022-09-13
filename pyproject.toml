@@ -80,5 +80,8 @@ extended_default_ignore = []
 flake8-docstrings = ["-*"]
 
 [build-system]
-requires = ["poetry-core"]
+requires = [
+    "poetry-core",
+    "cryptography",
+]
 build-backend = "poetry.core.masonry.api"

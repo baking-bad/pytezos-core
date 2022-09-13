@@ -47,7 +47,8 @@ build:             ## Build Python wheel package
 	poetry build
 
 image:             ## Build Docker image
-	docker buildx build . -t pytezos:${TAG}
+	docker buildx build . --progress plain -t pytezos_core:${TAG}
+	docker run --rm pytezos_core:${TAG} python -c "from pytezos_core.key import is_installed; assert is_installed(); import secp256k1; secp256k1.PrivateKey(); print('OK')"
 
 release-patch:     ## Release patch version
 	bumpversion patch
@@ -66,3 +67,10 @@ release-major:     ## Release major version
 
 clean:             ## Remove all files from .gitignore except for `.venv`
 	git clean -xdf --exclude=".venv"
+
+##
+
+update:            ## Update dependencies, export requirements.txt (wait an eternity)
+	make install
+	poetry update
+	poetry export --without-hashes -o requirements.txt
