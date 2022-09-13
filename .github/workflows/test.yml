@@ -2,12 +2,12 @@ name: Test
 on:
   push:
     paths:
-      - "src/**"
-      - "tests/**"
-      - "pyproject.toml"
-      - "poetry.lock"
-      - "Makefile"
-      - ".github/workflows/test.yml"
+      - 'src/**'
+      - 'tests/**'
+      - 'pyproject.toml'
+      - 'poetry.lock'
+      - 'Makefile'
+      - '.github/workflows/test.yml'
 
 jobs:
   test:
@@ -16,9 +16,9 @@ jobs:
     strategy:
       matrix:
         python-version: [
-          "3.8",
-          "3.9",
-          "3.10",
+          '3.8',
+          '3.9',
+          '3.10',
         ]
     steps:
       - name: Check out the repo
@@ -34,7 +34,7 @@ jobs:
       - name: Set up Poetry
         uses: snok/install-poetry@v1
         with:
-          version: "1.2.0"
+          version: '1.2.0'
 
       - name: Set up cache
         uses: actions/cache@v2
