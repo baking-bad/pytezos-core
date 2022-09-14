@@ -12,3 +12,10 @@
 [![License: MIT](https://img.shields.io/github/license/baking-bad/pytezos-core)](https://github.com/baking-bad/pytezos-core/blob/master/LICENSE)
 
 This repository contains utilities to work with [Tezos cryptography](https://pytezos.org/crypto.html). It is a part of the [PyTezos](https://github.com/baking-bad/pytezos) framework.
+
+To switch from mothership library replace `pytezos.crypto` imports with `pytezos_core`.
+
+```diff
+- from pytezos.crypto.key import Key
++ from pytezos_core.key import Key
+```
