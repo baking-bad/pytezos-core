@@ -39,7 +39,6 @@ python = ">=3.8,<3.11"
 base58 = "^2.1.1"
 fastecdsa = "^2.2.3"
 mnemonic = "^0.20"
-pyblake2 = "^1.1.2"
 pysodium = "^0.7.10"
 secp256k1 = "^0.14.0"
 

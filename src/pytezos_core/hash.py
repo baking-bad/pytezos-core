@@ -1,6 +1,5 @@
+from hashlib import blake2b  # type: ignore
 from typing import List
-
-from pyblake2 import blake2b  # type: ignore
 
 from pytezos_core.encoding import base58_decode
 from pytezos_core.encoding import base58_encode
